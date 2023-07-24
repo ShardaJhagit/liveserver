@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(background.jpg ) ;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+  
+}
+.t1{
+    border:2px rgb(116, 50, 50) solid;
+  width: 50vw;
+  height: 50vh;
+  margin-left: 25rem;
+  margin-top: 5rem;
+
+}.head{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.label h2{
+    font-family: Arial;
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+#in{
+    font-size: larger;
+    margin-left: 10rem;
+    padding: 0.3rem;
+    background-color: transparent;
+}
+#temp{
+    font-size: larger;
+    padding: 0.3rem;
+    background-color: transparent;
+    
+}
+#btn{
+    margin-top: 2rem;
+    margin-left: 17rem;
+    font-size: larger;
+    background-color: transparent;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+}
+#t1{
+    
+    margin-left: 15rem;
+    font-size: xx-large;
+    color: white;
+    
+}
+#t2{
+    margin-top: 2rem;
+    margin-left: 15rem;
+    font-size: xx-large;
+    color: white;
+    
+}
+
+</style>
+<body>
+  <div>
+    <div class="head">
+      <h1 >Teperature Convertor</h1>
+    </div>
+    <div class="t1">
+        <div class="label">
+            <h2>Please enter the temperture and select the unit:</h2>
+        </div>
+        <input type="number" id="in">
+        <select id="temp">
+            <option value="cel">Celcius</option>
+            <option value="fah">Fahrenheit</option>
+            <option value="kel">Kelvin</option>
+        </select><br>
+        <button onclick=convert() type="submit" id="btn">Convert</button>
+
+        <div>
+            <span id="t1"></span><br>
+            <span id="t2"></span>
+
+        </div>
+    </div>
+</div>
+<script>
+    function convert() {
+        const n = document.getElementById("in").value
+        const tempselect = document.getElementById("temp")
+        const value = tempselect.options[tempselect.selectedIndex].value
+        const first = document.getElementById("t1")
+        const second = document.getElementById("t2")
+        let result1
+        let result2
+        if (value == "cel") {
+            result1 = Math.round(n * (9 / 5) + 32);
+            result2 = Math.round(n * 1 + 273.15);
+            first.innerHTML = `=${result1}°Fahrenheit`;
+            second.innerHTML = `=${result2}Kelvin`;
+
+        }
+        else if (value == "fah") {
+            result1 = (n - 32) * (5 / 9);
+            result2 = result1 + 273.15;
+            first.innerHTML = `=${result1}°Celcius`;
+            second.innerHTML = `=${result2}°kelvin`;
+
+        }
+        else if (value == "kel") {
+            result1 = n - 273.15;
+            result2 = (n - 273.15) * (9 / 5) + 32;
+            first.innerHTML = `=${result1}°Celcius`;
+            second.innerHTML = `=${result2}°Fahrenheit`;
+
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
+
