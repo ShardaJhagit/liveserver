@@ -103,6 +103,9 @@ function Show() {
             <div>
 
                 <div className=" h-screen  w-auto p-10  bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl shadow-slate-600 hover:border-zinc-950 hover: border-solid hover:border-2  " >
+                    <div className="bg-slate-600">
+                    <h1>Weather Application</h1></div>
+
 
 
                     <div className="flex ">
