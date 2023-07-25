@@ -114,7 +114,7 @@ function Show() {
                             <img src={back} width="500px" height="500px" alt="bg" className="rounded-2xl"  id="i1"></img>
                         </div>
                         <div className="ml-18 mt-10 ">
-                        <p >you can see the weather of any Location by enter the location <br></br>in the box and click on search button.</p>
+                        <p className="text-xl ml-2 mb-2 font-serif">You can see the weather of any Location by enter the location <br></br>in the box and click on search button.</p>
                             <input type="text" placeholder="Search Your Location" onChange={e => setQuery(e.target.value)} value={query} className="p-1 border-2 border-black focus:outline-none focus:ring focus:ring-violet-300 rounded-xl"/>
                             <button onClick={search} className="border-2 border-black bg-gradient-to-r from-violet-500 to-fuchsia-500 p-1  w-40 ml-10 ">Search</button>
                             <div className="font-serif text-center text-3xl mx-auto mt-20 shadow-2xl shadow-slate-900 hover:border-zinc-950 hover: border-solid hover:border-2 w-48 bg-white">
