@@ -1,6 +1,6 @@
 {
   "name": "weather",
-  
+  "proxy": "http://www.jhablog.co.in",
   "homepage": ". ",
   "version": "0.1.0",
   "private": true,
